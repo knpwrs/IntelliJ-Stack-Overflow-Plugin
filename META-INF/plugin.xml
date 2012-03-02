@@ -10,7 +10,7 @@
               text="Search on Stack Overflow"
               description="Searches for the selected text or the word under the caret on Stack Overflow">
           <add-to-group group-id="ToolsMenu" anchor="last"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt S" second-keystroke="shift ctrl S"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl S"/>
       </action>
   </actions>
 </idea-plugin>
