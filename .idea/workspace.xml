@@ -70,8 +70,10 @@
       <file leaf-file-name="StackOverflowSearchAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/kenpowers/StackOverflowPlugin/StackOverflowSearchAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="695" selection-end="695" vertical-scroll-proportion="0.35958904">
-              <folding />
+            <state line="39" column="42" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.5479452">
+              <folding>
+                <element signature="method#getWordAtCaret#0;class#StackOverflowSearchAction#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -621,6 +623,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -884,8 +887,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/kenpowers/StackOverflowPlugin/StackOverflowSearchAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="695" selection-end="695" vertical-scroll-proportion="0.35958904">
-          <folding />
+        <state line="39" column="42" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.5479452">
+          <folding>
+            <element signature="method#getWordAtCaret#0;class#StackOverflowSearchAction#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

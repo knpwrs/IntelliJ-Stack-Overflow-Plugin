@@ -1,7 +1,13 @@
 package net.kenpowers.StackOverflowPlugin;
 
+import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DataKeys;
+import com.intellij.openapi.editor.Editor;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 /**
  * Action class for searching StackOverflow from the tools menu.
@@ -9,8 +15,33 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
  * @author Kenneth Powers
  */
 public class StackOverflowSearchAction extends AnAction {
-    public void actionPerformed(AnActionEvent e) {
-        // TODO: insert action logic here
+    /**
+     * Opens the default system browser with a Stack Overflow search to the word where the caret is located.
+     *
+     * @param ae The action from IntelliJ.
+     */
+    public void actionPerformed(AnActionEvent ae) {
+        Editor editor = ae.getData(DataKeys.EDITOR);
+        String word = getWordAtCaret(editor.getDocument().getCharsSequence(), editor.getCaretModel().getOffset());
+        if (word != null) {
+            String query;
+            try {
+                query = URLEncoder.encode(word, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                return;
+            }
+            BrowserUtil.launchBrowser("http://stackoverflow.com/search?q=" + query);
+        }
+    }
+
+    /**
+     * Enables / disables the action depending on the current context.
+     *
+     * @param ae The action from IntelliJ.
+     */
+    @Override
+    public void update(AnActionEvent ae) {
+        ae.getPresentation().setEnabled(ae.getData(DataKeys.EDITOR) != null);
     }
 
     /**
