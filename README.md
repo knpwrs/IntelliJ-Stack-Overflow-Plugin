@@ -1,0 +1,1 @@
+Ordinarily I wouldn't leave the IntelliJ project files in the repository; however, seeing as though this is an IntelliJ plugin it seemed appropriate.
